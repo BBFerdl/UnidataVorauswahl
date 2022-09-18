@@ -60,10 +60,8 @@ def createField(row,col):
 
 def fit(checkShape, checkField, checkPosX, checkPosY):
     if (checkPosY + len(checkShape) > len(checkField)):
-        print(str(checkPosX)+' y failed: '+ str(len(checkShape[0]))+' '+str(checkPosY))
         return 0
     if (checkPosX + len(checkShape[0]) > len(checkField[0])):
-        print(str(checkPosX)+' y failed: '+ str(len(checkShape[0]))+' '+str(checkPosY))
         return 0
     i = 0
     while i < len(checkShape):
