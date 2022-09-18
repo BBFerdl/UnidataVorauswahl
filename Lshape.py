@@ -28,8 +28,8 @@ shapes = [[[1,1],
         [0,0,1]]]
 #Grundfeld, entweder 4,6 oder 8,8
 #Leider fürt die Multiplikation der Felder zu Fehlern
-rows = 16
-cols = 8
+rows = 4
+cols = 6
 #Startposition List for Randomization
 posX = [0]
 posY = [0]
@@ -42,10 +42,7 @@ while y <= (rows-len(shapes[7][0])+1):
 while x <= (cols-len(shapes[0])+1):
     posX.append(x)
     x = x + 1
-print(posX)
-print(posY)
-#Zähler um zu messen wann das Feld voll ist.
-counter = 0
+#Grenze um zu messen wann das Feld voll ist.
 upperLimit = (rows*cols)/4
 
 def createField(row,col):
@@ -62,11 +59,11 @@ def createField(row,col):
     return outer
 
 def fit(checkShape, checkField, checkPosX, checkPosY):
-    print(str(checkPosX)+str(checkPosY))
-    print(checkField)
-    if (checkPosY + len(checkShape[0]) >= len(checkField)):
+    if (checkPosY + len(checkShape) > len(checkField)):
+        print(str(checkPosX)+' y failed: '+ str(len(checkShape[0]))+' '+str(checkPosY))
         return 0
-    if (checkPosX + len(checkShape) >= len(checkField[0])):
+    if (checkPosX + len(checkShape[0]) > len(checkField[0])):
+        print(str(checkPosX)+' y failed: '+ str(len(checkShape[0]))+' '+str(checkPosY))
         return 0
     i = 0
     while i < len(checkShape):
