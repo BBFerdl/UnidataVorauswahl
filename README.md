@@ -1,12 +1,14 @@
 # UnidataVorauswahl TODO
-
-* Felderstellung (4x6, 8x8, alternative Muster [Annahme: Vorraussetzung ist Teilbarkeit durch 4])
-* Speichern möglicher Lösungen
-
+	( das TO steht für Time Out :) )
+	
 Problematisch
-* Feldbefüllungs Algorythmus (check Commit)
-* Check für Passung
+* Feldbefüllungs Algorythmus Rekursion scheint fehlerhaft zu sein
 
 Done
 * Hinzufügen der Formmöglichkeiten 
 * Zufallsorientieres Arbeiten
+* Check für Passung 
+* Felderstellung (4x6, 8x8, alternative Muster)
+
+Verworfen
+* Speichern möglicher Lösungen
